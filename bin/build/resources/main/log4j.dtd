@@ -1,0 +1,5 @@
+<!ATTLIST log4j:configuration
+        xmlns:log4j              CDATA #FIXED "http://jakarta.apache.org/log4j/"
+        threshold                (all|debug|info|warn|error|fatal|off|null) "null"
+        debug                    (true|false|null)  "true"
+        >

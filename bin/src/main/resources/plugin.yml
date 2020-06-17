@@ -1,0 +1,37 @@
+name: AntiAuraAddon
+version: 2.5
+api-version: 1.15
+main: de.thedevelon.aaa.main.Main
+author: TheDevelon
+description: AntiAuraAddon is an add-on for the well known anti cheat AntiAura and adds features like customizable notifications with events and support for Discord (via Bots).
+
+commands:
+  antiauraaddon:
+    aliases: [aaa]
+    description: Used for all main commands provided by AntiAuraAddon. Type /aaa for help.
+permissions:
+  aaa.*:
+    description: Gives access to all AntiAuraAddon features.
+    default: op
+    children:
+      #add childrens
+      aaa.notifications: true
+      aaa.errors: true
+      aaa.command: true
+  aaa.notifications:
+    description: You can see notifications send by AntiAuraAddon.
+    default: false
+  aaa.errors:
+    description: Lets you see error messages in-game.
+    default: op
+  aaa.command:
+    description: Lets you use all commands of AntiAuraAddon.
+    default: op
+    children:
+      aaa.command.help: true
+  aaa.command.help:
+    description: You can use /aaa help with this permission.
+    default: false
+      
+  
+  
